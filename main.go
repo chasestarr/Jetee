@@ -2,9 +2,9 @@ package main
 
 import (
 	"fmt"
+	"github.com/chasestarr/Jetee/repl"
 	"os"
 	"os/user"
-	"github.com/chasestarr/Jetee/repl"
 )
 
 func main() {
