@@ -12,7 +12,7 @@ func TestLetStatements(t *testing.T) {
 						let y = 10;
 						let foobar = 838383;
 					 `
-  l := lexer.New(input)
+	l := lexer.New(input)
 	p := New(l)
 
 	program := p.ParseProgram()
@@ -98,7 +98,7 @@ func TestReturnStatements(t *testing.T) {
 
 func checkParserErrors(t *testing.T, p *Parser) {
 	errors := p.Errors()
-	if len (errors) == 0 {
+	if len(errors) == 0 {
 		return
 	}
 

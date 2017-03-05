@@ -9,15 +9,15 @@ import (
 )
 
 type Parser struct {
-	l *lexer.Lexer
-	curToken token.Token
+	l         *lexer.Lexer
+	curToken  token.Token
 	peekToken token.Token
-	errors []string
+	errors    []string
 }
 
 func New(l *lexer.Lexer) *Parser {
 	p := &Parser{
-		l: l,
+		l:      l,
 		errors: []string{},
 	}
 
@@ -59,12 +59,12 @@ func (p *Parser) ParseProgram() *ast.Program {
 
 func (p *Parser) parseStatement() ast.Statement {
 	switch p.curToken.Type {
-		case token.LET:
-			return p.parseLetStatement()
-		case token.RETURN:
-			return p.parseReturnStatement()
-		default:
-			return nil
+	case token.LET:
+		return p.parseLetStatement()
+	case token.RETURN:
+		return p.parseReturnStatement()
+	default:
+		return nil
 	}
 }
 
